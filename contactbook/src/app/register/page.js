@@ -26,6 +26,10 @@ export default function Register() {
       formIsValid = false;
       errors.phone = "Phone is Empty!";
     }
+     if (!state.password) {
+      formIsValid = false;
+      errors.password = "password is Empty!";
+    }
     return { errors, formIsValid };
   };
   const handleSubmit = () => {
@@ -73,6 +77,16 @@ export default function Register() {
                 onChange={(e) => handleChange(e)}
               />
               <p>{errors.phone}</p>
+            </div>
+            <label>Password</label>
+            <div className="form-body">
+              <input
+                type="tel"
+                name="password"
+                className="form-control"
+                onChange={(e) => handleChange(e)}
+              />
+              <p>{errors.password}</p>
             </div>
             <div className="form-body">
               <button

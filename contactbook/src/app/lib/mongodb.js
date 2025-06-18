@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-console.log("dkfdk",process.env.MONGODB_URI)
+// console.log("dkfdk",process.env.MONGODB_URI)
 const connectMongoDB = async () => {
   try {
     await mongoose.connect(`${process.env.MONGODB_URI}`, {
-      dbName: "portfolio", 
+      dbName: "contactBook", 
     });
     console.log("Connected to MongoDB.");
   } catch (error) {
